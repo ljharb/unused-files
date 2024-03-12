@@ -1,0 +1,29 @@
+{
+	"name": "@ljharb/unused-files",
+	"version": "0.0.0",
+	"description": "List unused files in your package.",
+	"bin": "./bin.mjs",
+	"main": false,
+	"sideEffects": false,
+	"exports": {
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ljharb/unused-files.git"
+	},
+	"keywords": [
+		"unused",
+		"files",
+		"package"
+	],
+	"author": "Jordan Harband <ljharb@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ljharb/unused-files/issues"
+	},
+	"homepage": "https://github.com/ljharb/unused-files#readme"
+}
