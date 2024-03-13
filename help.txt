@@ -1,0 +1,11 @@
+Usage: unused-files [options]
+
+Options:
+  --ignorePattern <pattern>  Ignore files matching the given pattern
+    [string]
+    [multiple]
+    [default: .github/**, coverage/**, test/**, tests/**, example/**]
+
+  --json                     Output the result as a JSON array
+    [boolean]
+    [default: false]

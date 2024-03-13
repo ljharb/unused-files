@@ -1,0 +1,33 @@
+{
+	"root": true,
+
+	"extends": "@ljharb/eslint-config/node/20",
+
+	"rules": {
+		"max-lines-per-function": "off",
+	},
+
+	"overrides": [
+		{
+			"files": "bin.mjs",
+			"rules": {
+				"no-throw-literal": "off",
+			},
+		},
+		{
+			"files": "index.mjs",
+		},
+		{
+			"files": "test/fixtures/**",
+			"rules": {
+				"strict": "off"
+			},
+		},
+		{
+			"files": "test/**",
+			"rules": {
+				"max-params": "off",
+			},
+		},
+	],
+}

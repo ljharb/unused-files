@@ -1,0 +1,9 @@
+{
+	"status": 0,
+	"stdout": "./c.js\n./d.js",
+	"stderr": "",
+	"files": [
+		"./c.js",
+		"./d.js"
+	]
+}

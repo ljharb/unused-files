@@ -1,0 +1,8 @@
+{
+	"private": true,
+	"name": "@ljharb/fixture-all-used",
+	"main": "a.js",
+	"exports": {
+		"./c": "./c.js"
+	}
+}
