@@ -1,0 +1,8 @@
+{
+	"private": true,
+	"name": "@ljharb/fixture-bin-object",
+	"bin": {
+		"a": "./a.js",
+		"c": "./c.js"
+	}
+}

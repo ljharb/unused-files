@@ -1,5 +1,5 @@
 {
 	"private": true,
-	"name": "@ljharb/fixture-all-used",
+	"name": "@ljharb/fixture-main",
 	"main": "a.js"
 }

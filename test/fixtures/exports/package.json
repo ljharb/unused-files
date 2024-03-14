@@ -1,6 +1,6 @@
 {
 	"private": true,
-	"name": "@ljharb/fixture-all-used",
+	"name": "@ljharb/fixture-exports",
 	"main": "a.js",
 	"exports": {
 		"./c": "./c.js"
