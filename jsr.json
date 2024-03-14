@@ -1,0 +1,17 @@
+{
+	"name": "@ljharb/unused-files",
+	"version": "0.1.0",
+	"bin": "./bin.mjs",
+	"exports": {
+		"./package.json": "./package.json"
+	},
+	"publish": {
+		"include": ["**/*"],
+		"exclude": [
+			".github/workflows",
+			".eslintrc",
+			".nycrc",
+			"test"
+		]
+	}
+}
