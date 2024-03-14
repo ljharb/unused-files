@@ -46,7 +46,7 @@
 		"@ljharb/eslint-config": "^21.1.0",
 		"@ljharb/tsconfig": "^0.2.0",
 		"@types/micromatch": "^4.0.6",
-		"@types/object.groupby": "^1.0.4",
+		"@types/object.groupby": "https://gitpkg.now.sh/DefinitelyTyped/DefinitelyTyped/types/object.groupby?2489af71f28f861b4bf3884ecf35a3d204e3bb48",
 		"@types/tape": "^5.6.4",
 		"@types/webpack": "^5.28.5",
 		"aud": "^2.0.4",
