@@ -42,7 +42,8 @@
 		"object.groupby": "^1.0.3"
 	},
 	"devDependencies": {
-		"@arethetypeswrong/cli": "^0.15.1",
+		"@arethetypeswrong/cli": "^0.15.2",
+		"@jest/types": "^29.6.3",
 		"@ljharb/eslint-config": "^21.1.0",
 		"@ljharb/tsconfig": "^0.2.0",
 		"@types/micromatch": "^4.0.6",
