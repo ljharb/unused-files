@@ -23,6 +23,7 @@ export default async function unusedFiles(
 			gitignore: true,
 			isFix: false,
 			isIncludeEntryExports: true,
+			isIncludeLibs: true,
 			isIsolateWorkspaces: false,
 			isProduction: true,
 			isShowProgress: false,
