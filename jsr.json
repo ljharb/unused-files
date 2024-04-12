@@ -1,8 +1,9 @@
 {
 	"name": "@ljharb/unused-files",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"bin": "./bin.mjs",
 	"exports": {
+		"./jsr.json": "./jsr.json",
 		"./package.json": "./package.json"
 	},
 	"publish": {

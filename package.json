@@ -77,7 +77,8 @@
 			".github/workflows",
 			".eslintrc",
 			".nycrc",
-			"test"
+			"test",
+			"jsr.json"
 		]
 	}
 }
