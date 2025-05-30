@@ -18,17 +18,30 @@ export default async function unusedFiles(
 		const { main: knip } = await import('knip');
 
 		({ issues: { files } } = await knip({
+			cacheLocation: '',
 			cwd,
+			excludedIssueTypes: [],
 			fixTypes: [],
 			gitignore: true,
+			includedIssueTypes: [],
+			isCache: false,
+			isDebug: false,
+			isDependenciesShorthand: false,
+			isExportsShorthand: false,
+			isFilesShorthand: false,
 			isFix: false,
+			isFormat: false,
 			isIncludeEntryExports: true,
 			isIncludeLibs: true,
 			isIsolateWorkspaces: false,
 			isProduction: true,
+			isRemoveFiles: false,
 			isShowProgress: false,
 			isStrict: true,
+			isWatch: false,
 			tags: [[], []],
+			tsConfigFile: '',
+			workspace: undefined,
 		}));
 	} finally {
 		process.argv = origArgv;
