@@ -1,6 +1,6 @@
 {
 	"name": "@ljharb/unused-files",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "List unused files in your package.",
 	"bin": "./bin.mjs",
 	"main": false,

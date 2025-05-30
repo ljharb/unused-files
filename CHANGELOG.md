@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.2](https://github.com/ljharb/unused-files/compare/v0.1.1...v0.1.2) - 2025-05-29
+
+### Commits
+
+- [Dev Deps] update `@arethetypeswrong/cli`, `@ljharb/eslint-config`, `@ljharb/tsconfig`, `@types/micromatch`, `@types/tape`, `auto-changelog`, `c8`, `playwright`, `tape` [`5ea2a9b`](https://github.com/ljharb/unused-files/commit/5ea2a9b60474033374e143a524b13dfeaeac3e9b)
+- [jsr] v0.1.1 [`3c9b832`](https://github.com/ljharb/unused-files/commit/3c9b8326b3b3d203fea7467d80f2d39246f53c69)
+- [Deps] update `knip`, `micromatch` [`ae13f9e`](https://github.com/ljharb/unused-files/commit/ae13f9e01ca10e7de50a11fb1af4c5a45a0c4ece)
+- [Tests] replace `aud` with `npm audit` [`9cd7f44`](https://github.com/ljharb/unused-files/commit/9cd7f44ca05ae87d1be364113d732e897c622ddb)
+- [Dev Deps] add missing peer dep [`d893df4`](https://github.com/ljharb/unused-files/commit/d893df4293dd7a73ba2cca2b0682e057a9b41416)
+- [Dev Deps] add `playwright` because `knip` and TS needs it [`444359d`](https://github.com/ljharb/unused-files/commit/444359db8c78b4d15371c10aeacecebcc72c62f9)
+
 ## [v0.1.1](https://github.com/ljharb/unused-files/compare/v0.1.0...v0.1.1) - 2024-04-12
 
 ### Commits
