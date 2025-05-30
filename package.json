@@ -37,8 +37,8 @@
 	},
 	"homepage": "https://github.com/ljharb/unused-files#readme",
 	"dependencies": {
-		"knip": "^5.9.4",
-		"micromatch": "^4.0.5",
+		"knip": "^5.59.1",
+		"micromatch": "^4.0.8",
 		"object.groupby": "^1.0.3"
 	},
 	"devDependencies": {
