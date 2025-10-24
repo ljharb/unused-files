@@ -46,7 +46,7 @@
 		"@jest/types": "^29.6.3",
 		"@ljharb/eslint-config": "^21.2.0",
 		"@ljharb/tsconfig": "^0.3.2",
-		"@types/micromatch": "^4.0.9",
+		"@types/micromatch": "^4.0.10",
 		"@types/minimist": "^1.2.5",
 		"@types/object.groupby": "^1.0.4",
 		"@types/tape": "^5.8.1",
