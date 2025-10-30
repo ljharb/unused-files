@@ -1,15 +1,13 @@
 #!/usr/bin/env node
 
-import { readFile } from 'fs/promises';
-import { join } from 'path';
+import pargs from 'pargs';
 
 import unusedFiles from './index.mjs';
 
-import pargs from './pargs.mjs';
-
-const help = await readFile(join(import.meta.dirname, './help.txt'), 'utf8');
-
-const { values: { json, ignorePattern } } = pargs(help, import.meta.filename, {
+const {
+	help,
+	values: { json, ignorePattern },
+} = await pargs(import.meta.filename, {
 	options: {
 		ignorePattern: {
 			default: undefined,
@@ -22,6 +20,8 @@ const { values: { json, ignorePattern } } = pargs(help, import.meta.filename, {
 		},
 	},
 });
+
+await help();
 
 // eslint-disable-next-line no-extra-parens
 const files = await unusedFiles(process.cwd(), /** @type {string[] | undefined} */ (ignorePattern));

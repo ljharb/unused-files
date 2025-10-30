@@ -39,7 +39,8 @@
 	"dependencies": {
 		"knip": "^5.59.1",
 		"micromatch": "^4.0.8",
-		"object.groupby": "^1.0.3"
+		"object.groupby": "^1.0.3",
+		"pargs": "^1.0.3"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.18.2",

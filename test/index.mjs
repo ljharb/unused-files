@@ -98,9 +98,9 @@ test('unused-files', async (t) => {
 		{
 			args: ['--json', '--no-json'],
 			expected: {
-				status: 2,
+				status: 1,
 				stdout: help,
-				stderr: 'Error: Arguments --json and --no-json are mutually exclusive',
+				stderr: 'Error: Arguments `--json` and `--no-json` are mutually exclusive',
 			},
 		},
 	].concat(await Promise.all((await readdir(fixtureDir)).map(async (fixture) => {
