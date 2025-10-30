@@ -64,7 +64,7 @@
 		"typescript": "next"
 	},
 	"engines": {
-		"node": "^20.11.1 || >= 21.7.1"
+		"node": "^22.20 || ^24.10 || >= 25"
 	},
 	"auto-changelog": {
 		"output": "CHANGELOG.md",
