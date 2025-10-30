@@ -16,6 +16,9 @@
 		},
 		{
 			"files": "index.mjs",
+			"rules": {
+				"no-extra-parens": "off",
+			},
 		},
 		{
 			"files": "test/fixtures/**",
@@ -26,6 +29,7 @@
 		{
 			"files": "test/**",
 			"rules": {
+				"func-style": "off",
 				"max-params": "off",
 			},
 		},

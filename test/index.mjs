@@ -108,7 +108,6 @@ test('unused-files', async (t) => {
 		return {
 			cwd,
 			args: [],
-			// eslint-disable-next-line no-extra-parens
 			expected: /** @type {Expected} */ (JSON.parse(await readFile(join(cwd, 'expected.json'), 'utf8'))),
 		};
 	})));
