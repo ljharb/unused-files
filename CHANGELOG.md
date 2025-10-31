@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.2.0](https://github.com/ljharb/unused-files/compare/v0.1.2...v0.2.0) - 2025-10-31
+
+### Commits
+
+- [Refactor] use `pargs` package [`4742989`](https://github.com/ljharb/unused-files/commit/474298940a86f4a60e99d860d12f217d9f19dba8)
+- [Fix] handle new API requirements inside knip [`91b7795`](https://github.com/ljharb/unused-files/commit/91b77959a27407a5d8ec23f77b8f829046f0ed9b)
+- [Breaking] update `engines.node` [`2945c2f`](https://github.com/ljharb/unused-files/commit/2945c2fabc93fcdcc0896e1b19fba4f80278edc2)
+- [Dev Deps] update `@arethetypeswrong/cli`, `@ljharb/eslint-config`, `playwright` [`ddc5f59`](https://github.com/ljharb/unused-files/commit/ddc5f5962db7c642698d3b05e88034aa7b676934)
+- [Dev Deps] update `@types/micromatch` [`aaef372`](https://github.com/ljharb/unused-files/commit/aaef3722dddb3fc4b1c250ba459e798d5e32889b)
+- [Dev Deps] update `playwright` [`fdc1376`](https://github.com/ljharb/unused-files/commit/fdc137615f2d2a6915fe23ef9a518e60c2811367)
+- [Dev Deps] update `playwright` [`dc73725`](https://github.com/ljharb/unused-files/commit/dc73725fc08fef10edb3d909ecf11fd962fd85c8)
+- [types] ignore incomplete knip types [`7a05e3e`](https://github.com/ljharb/unused-files/commit/7a05e3e1d74e90dfff7f72c35fef8b667c5e5b26)
+
 ## [v0.1.2](https://github.com/ljharb/unused-files/compare/v0.1.1...v0.1.2) - 2025-05-29
 
 ### Commits
