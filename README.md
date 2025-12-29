@@ -55,5 +55,5 @@ MIT
 [downloads-url]: https://npm-stat.com/charts.html?package=@ljharb/unused-files
 [codecov-image]: https://codecov.io/gh/ljharb/unused-files/branch/main/graphs/badge.svg
 [codecov-url]: https://app.codecov.io/gh/ljharb/unused-files/
-[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/ljharb/unused-files
+[actions-image]: https://img.shields.io/github/check-runs/ljharb/unused-files/main
 [actions-url]: https://github.com/ljharb/unused-files/actions
