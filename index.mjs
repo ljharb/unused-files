@@ -15,10 +15,14 @@ export default async function unusedFiles(
 	let files;
 	try {
 		process.argv = origArgv.slice(0, 2);
+		// @ts-expect-error knip doesn't have main in its types
 		const { main: knip } = await import('knip');
 
 		({ issues: { files } } = await knip({
 			cacheLocation: '',
+			catalog: {
+				filePath: '',
+			},
 			config: undefined,
 			configFilePath: undefined,
 			cwd,
