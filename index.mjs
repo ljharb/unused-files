@@ -63,6 +63,8 @@ export default async function unusedFiles(
 			isProduction: true,
 			isReportClassMembers: true,
 			isReportDependencies: true,
+			isReportExports: true,
+			isReportFiles: true,
 			isReportTypes: true,
 			isReportValues: true,
 			isShowProgress: false,
