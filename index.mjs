@@ -23,8 +23,8 @@ export default async function unusedFiles(
 			catalog: {
 				filePath: '',
 			},
-			config: undefined,
-			configFilePath: undefined,
+			config: void undefined,
+			configFilePath: void undefined,
 			cwd,
 			dependencies: true,
 			experimentalTags: [[], []],
@@ -92,10 +92,10 @@ export default async function unusedFiles(
 				unresolved: 'error',
 			},
 			tags: [[], []],
-			traceExport: undefined,
-			traceFile: undefined,
+			traceExport: void undefined,
+			traceFile: void undefined,
 			tsConfigFile: '',
-			workspace: undefined,
+			workspace: void undefined,
 			workspaces: [],
 		}));
 	} finally {
