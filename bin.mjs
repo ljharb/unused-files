@@ -10,12 +10,21 @@ const {
 } = await pargs(import.meta.filename, {
 	options: {
 		ignorePattern: {
-			default: undefined,
+			default: [
+				'.github/**',
+				'coverage/**',
+				'test/**',
+				'tests/**',
+				'example/**',
+			],
+			description: 'Ignore files matching the given pattern',
 			multiple: true,
+			placeholder: 'pattern',
 			type: 'string',
 		},
 		json: {
 			default: false,
+			description: 'Output the result as a JSON array',
 			type: 'boolean',
 		},
 	},

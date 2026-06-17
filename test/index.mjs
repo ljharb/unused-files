@@ -10,11 +10,11 @@ const rootPath = join(import.meta.dirname, '..');
 const fixtureDir = join(import.meta.dirname, 'fixtures');
 const binPath = join(import.meta.dirname, '..', 'bin.mjs');
 
-const help = (await readFile(join(rootPath, './help.txt'), 'utf8')).trim();
+/** @import { Test } from 'tape' */
 
 /** @typedef {{ status: number, stdout: string, stderr: string, files?: string[] }} Expected */
 
-/** @type {(t: import('tape').Test, expected: Expected, cwd?: string, args?: string[]) => void} */
+/** @type {(t: Test, expected: Expected, cwd?: string, args?: string[]) => void} */
 function testBin(t, expected, cwd = rootPath, args = []) {
 	t.test(`./${relative(rootPath, cwd)} ${args.join(' ')}`, async (st) => {
 		const { status, stdout, stderr } = spawnSync(process.execPath, [binPath, ...args], { cwd });
@@ -61,6 +61,9 @@ function testBin(t, expected, cwd = rootPath, args = []) {
 }
 
 test('unused-files', async (t) => {
+	const { stdout } = spawnSync(process.execPath, [binPath, '--help'], { cwd: process.cwd() });
+	const help = `${stdout}`.trim();
+
 	/** @type {{ args: string[], cwd?: string, expected: Expected }[]} */
 	const testCases = [
 		{
