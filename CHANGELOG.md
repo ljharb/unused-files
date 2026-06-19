@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.2.2](https://github.com/ljharb/unused-files/compare/v0.2.1...v0.2.2) - 2026-06-19
+
+### Commits
+
+- [Deps] update `knip` [`74d46f6`](https://github.com/ljharb/unused-files/commit/74d46f68120012c6805e570a1d19b1a38baac1e3)
+- [Deps] update `pargs` [`3ea5df5`](https://github.com/ljharb/unused-files/commit/3ea5df5689a15d3a0379662ae9661e9e958cd648)
+- [actions] update workflows [`861b83f`](https://github.com/ljharb/unused-files/commit/861b83f0586d5c8890dcea69a3d2e6ca75455523)
+- [Dev Deps] update `@arethetypeswrong/cli`, `@ljharb/eslint-config`, `auto-changelog`, `playwright`, `tape` [`57cabf2`](https://github.com/ljharb/unused-files/commit/57cabf2f15b407c6e05b0975a3f1f734adbf7a6a)
+- [Robustness] use `void` [`9dd847c`](https://github.com/ljharb/unused-files/commit/9dd847ce96cbf0b8bc7be4ce96a44a3edf21db48)
+- [Deps] update `knip` [`9688566`](https://github.com/ljharb/unused-files/commit/96885666830af026502512897e5c7da2920b765c)
+- [Deps] update `pargs` [`153f236`](https://github.com/ljharb/unused-files/commit/153f236102070d4656b030f9badaa4ec1865a103)
+
 ## [v0.2.1](https://github.com/ljharb/unused-files/compare/v0.2.0...v0.2.1) - 2026-01-06
 
 ### Commits
