@@ -1,5 +1,18 @@
-import { relative } from 'path';
+import { createRequire } from 'module';
+import { dirname, join, relative } from 'path';
+import { pathToFileURL } from 'url';
+
 import micromatch from 'micromatch';
+
+const require = createRequire(import.meta.url);
+
+/*
+ * knip only exports `main`; the option builder it relies on lives in an internal
+ * module that knip's `exports` map hides from bare-specifier imports. Resolving
+ * knip's entry point and importing the file directly bypasses that gate, since
+ * the `exports` map only governs `knip/…` specifiers, not file URLs.
+ */
+const createOptionsURL = pathToFileURL(join(dirname(require.resolve('knip')), 'util', 'create-options.js')).href;
 
 export default async function unusedFiles(
 	cwd = process.cwd(),
@@ -11,100 +24,24 @@ export default async function unusedFiles(
 		'example/**',
 	],
 ) {
-	const origArgv = process.argv;
-	let files;
-	try {
-		process.argv = origArgv.slice(0, 2);
-		// @ts-expect-error knip doesn't have main in its types
-		const { main: knip } = await import('knip');
+	// @ts-expect-error knip doesn't have main in its types
+	const { main: knip } = await import('knip');
+	const { createOptions } = await import(createOptionsURL);
 
-		({ issues: { files } } = await knip({
-			cacheLocation: '',
-			catalog: {
-				filePath: '',
-			},
-			config: void undefined,
-			configFilePath: void undefined,
-			cwd,
-			dependencies: true,
-			experimentalTags: [[], []],
-			exports: true,
-			files: true,
-			fixTypes: [],
-			gitignore: true,
-			includedIssueTypes: {
-				_files: true,
-				binaries: true,
-				classMembers: true,
-				dependencies: true,
-				devDependencies: true,
-				duplicates: true,
-				enumMembers: true,
-				exports: true,
-				files: true,
-				nsExports: true,
-				nsTypes: true,
-				optionalPeerDependencies: true,
-				types: true,
-				unlisted: true,
-				unresolved: true,
-			},
-			isCache: false,
-			isDebug: false,
-			isDisableConfigHints: true,
-			isFix: false,
-			isFixDependencies: false,
-			isFixFiles: false,
-			isFixUnusedExports: false,
-			isFixUnusedTypes: false,
-			isFormat: false,
-			isIncludeEntryExports: true,
-			isIsolateWorkspaces: false,
-			isProduction: true,
-			isReportClassMembers: true,
-			isReportDependencies: true,
-			isReportExports: true,
-			isReportFiles: true,
-			isReportTypes: true,
-			isReportValues: true,
-			isShowProgress: false,
-			isSkipLibs: false,
-			isStrict: true,
-			isTrace: false,
-			isTreatConfigHintsAsErrors: false,
-			isWatch: false,
-			parsedConfig: {},
-			rules: {
-				_files: 'error',
-				binaries: 'error',
-				classMembers: 'error',
-				dependencies: 'error',
-				devDependencies: 'error',
-				duplicates: 'error',
-				enumMembers: 'error',
-				exports: 'error',
-				files: 'error',
-				nsExports: 'error',
-				nsTypes: 'error',
-				optionalPeerDependencies: 'error',
-				types: 'error',
-				unlisted: 'error',
-				unresolved: 'error',
-			},
-			tags: [[], []],
-			traceExport: void undefined,
-			traceFile: void undefined,
-			tsConfigFile: '',
-			workspace: void undefined,
-			workspaces: [],
-		}));
-	} finally {
-		process.argv = origArgv;
-	}
+	const options = await createOptions({
+		cwd,
+		includedIssueTypes: ['files'],
+		isProduction: true,
+		isStrict: true,
+	});
 
-	return Array.from(files).flatMap((x) => (
-		micromatch.isMatch(relative(cwd, x), ignorePattern)
-			? []
-			: `./${relative(cwd, x)}`
-	));
+	const { issues: { files } } = await knip(options);
+
+	return Object.values(files)
+		.flatMap((bySymbol) => Object.values(bySymbol))
+		.flatMap((issue) => (
+			micromatch.isMatch(relative(cwd, issue.filePath), ignorePattern)
+				? []
+				: `./${relative(cwd, issue.filePath)}`
+		));
 }
